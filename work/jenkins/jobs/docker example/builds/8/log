@@ -1,0 +1,23 @@
+Started by user [8mha:////4N7HofABBC2DJfpcmy7b4fIx+UdB8Vpv/mJ37vjOpyUuAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/docker example
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/docker example/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/newRagnaros84/docker_simple.git # timeout=10
+Fetching upstream changes from https://github.com/newRagnaros84/docker_simple.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/newRagnaros84/docker_simple.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision d46d157c2b70bb4f375cc6c25256b0c2cf1e6bc7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d46d157c2b70bb4f375cc6c25256b0c2cf1e6bc7 # timeout=10
+Commit message: "new commit"
+ > git rev-list --no-walk d46d157c2b70bb4f375cc6c25256b0c2cf1e6bc7 # timeout=10
+[docker example] $ /bin/sh -xe /tmp/jenkins6044971278498636836.sh
++ mvn --version
+/tmp/jenkins6044971278498636836.sh: 2: mvn: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
