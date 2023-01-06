@@ -1,7 +1,5 @@
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Issue;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,6 +29,7 @@ public class Main {
     @Test
     @DisplayName("Открываем сщуствующую Issue")
     public void testIssue() {
+        System.out.println("123");;
         step("Открываем главную страницу", () -> {
             open("https://github.com");
         });
