@@ -18,12 +18,21 @@
     tools {
         maven &apos;3.8.7&apos; 
     }
-    stages { stage(&apos;Example&apos;) {
-        steps { sh &apos;mvn clean&apos;
-        sh &apos;mvn -Dtest=Main test&apos;}
+    stages { 
+        stage(&apos;Pull browser&apos;) {
+        steps {
+           catchError {
+              script {
+      	    docker.image(&apos;selenoid/chrome:75.0&apos;)
+      	      }
+           }
+        }
+     }
+        
+        stage(&apos;Example&apos;) {
+        steps { sh &apos;mvn -Dtest=&quot;Main#testIssue&quot; clean test-compile test&apos;}
     }
     }
-    
 }</script>
     <sandbox>true</sandbox>
   </definition>

@@ -18,13 +18,13 @@ import static io.qameta.allure.Allure.step;
 
 public class Main {
 
-    @BeforeEach
-    public void initDriver() throws IOException {
-        final String url = "http://localhost:4444/wd/hub";
-        WebDriver driver = new RemoteWebDriver(new URL(url), DesiredCapabilities.chrome());
-        driver.manage().window().setSize(new Dimension(1920,1024));
-        WebDriverRunner.setWebDriver(driver);
-    }
+//    @BeforeEach
+//    public void initDriver() throws IOException {
+//        final String url = "http://localhost:4444/wd/hub";
+//        WebDriver driver = new RemoteWebDriver(new URL(url), DesiredCapabilities.chrome());
+//        driver.manage().window().setSize(new Dimension(1920,1024));
+//        WebDriverRunner.setWebDriver(driver);
+//    }
 
     @Test
     @DisplayName("Открываем сщуствующую Issue")
@@ -49,9 +49,9 @@ public class Main {
 //        });
     }
 
-    @AfterEach
-    public void stopDriver() {
-        Optional.ofNullable(WebDriverRunner.getWebDriver()).ifPresent(WebDriver::quit);
-    }
+//    @AfterEach
+//    public void stopDriver() {
+//        Optional.ofNullable(WebDriverRunner.getWebDriver()).ifPresent(WebDriver::quit);
+//    }
 
 }
